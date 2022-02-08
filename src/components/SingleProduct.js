@@ -1,18 +1,15 @@
-import React from "react";
+import React,{useContext} from "react";
 import { app } from "../fb";
 import "./SingleProduct.css";
 
 import { useCart } from "react-use-cart";
+import { CartContext } from "../contexts/CartContext";
 
 export const SingleProduct = (props) => {
+  const [{items},{addItem}] = useContext(CartContext);
   const { data } = props;
-
-  //const {addItem} = useCart();
-  const addItem = (item) => {
-    //se añade un articulo nuevo al carrito
-    app.firestore().collection("carts").add(item);
-  };
-
+  const clave = "articulos";
+  
   return (
     <div className="productCard" key={data.id}>
       <img className="productCardImg" src={data.imageURL} alt={data.name} />
