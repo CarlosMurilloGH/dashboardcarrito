@@ -1,8 +1,5 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, {  useContext } from "react";
 import "./Carrito.css";
-import { app } from "../fb";
-import { useCart } from "react-use-cart";
-import { Link } from "react-router-dom";
 import { CartContext } from "../contexts/CartContext";
 
 export const Carrito = () => {
@@ -59,6 +56,7 @@ export const Carrito = () => {
           Total { getString().total}
           <button>
             <a
+            rel="noreferrer"
               target="_blank"
               href={`https://api.whatsapp.com/send?phone=51956348183&text=${
                 getString().string

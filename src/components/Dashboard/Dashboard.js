@@ -3,7 +3,7 @@ import "./Dashboard.css";
 import { Header } from "./Header";
 import { PanelProductos } from "./PanelProductos";
 import { Tienda } from "../Tienda";
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { Configuracion } from "./Configuracion";
 
 export const Dashboard = () => {
